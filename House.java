@@ -8,7 +8,7 @@ public class House extends Building{
   /* This constructs a new object called House and its arributes */
 
   public House(String name, String address, int nFloors, boolean hasDiningRoom) {
-    super(name, address, nFloors):
+    super(name, address, nFloors);
     this.hasDiningRoom = hasDiningRoom;
     this.residents = new ArrayList<>();
     System.out.println("You have built a house: 🏠");
@@ -26,13 +26,17 @@ public class House extends Building{
 
   /* Method removes a resident from the house */
   public String moveOut(String name) {
+    if this.residents = name{
     residents.remove(name);
     return name;
+  }
   }
 
   /* MEthod adds a resident to the house */
   public void moveIn(String name) {
+    if this.residents != name{
     residents.add(name);
+    }
   }
 
   /* Method checks if the resident is in the house */

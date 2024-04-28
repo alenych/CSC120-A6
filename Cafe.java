@@ -32,10 +32,11 @@ public class Cafe extends Building{
     }
     
     private void restock() {
-        this.nCoffeeOunces = 50;
-        this.nSugarPackets = 50;
-        this.nCreams = 50;
-        this.nCup = 50;
+        this.nCoffeeOunces += 50;
+        this.nSugarPackets += 50;
+        this.nCreams += 50;
+        this.nCup += 50;
         System.out.println("Restock complete");
+        sellCoffee();
     }
 }

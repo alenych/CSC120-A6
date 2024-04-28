@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 
 public class Library extends Building {
-  private ArrayList<Boolean> bookAvailable;
+  private Hashtable<Boolean> bookAvailable;
   private ArrayList<String> bookTitles;
 }
 
@@ -18,8 +18,10 @@ public Library(String name, String address, int nFloors) {
 /* Method adds a book to the library object
  */
 public void addTitle (String title) {
+  if this.bookTitles != title{
   bookTitles.add(title);
   bookAvailable.add(true);
+  }
 }
 
 /* Method removes a book from the library */
@@ -41,7 +43,7 @@ public void checkOut (String title) {
     bookAvailable.set(index, false);
   }
   else {
-    System.out.println("Sorry, this title is not in the library");
+    System.out.println("Sorry, this title is not available to be borrowed");
 
   }
 }
@@ -54,7 +56,7 @@ public void checkOut (String title) {
     bookAvailable.set(index, true);
   }
   else {
-    System.out.println("Sorry, this title is not in the library");
+    System.out.println("Sorry, this title has already been returned");
 
   }
 
